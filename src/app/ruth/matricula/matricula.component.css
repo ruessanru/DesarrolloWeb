@@ -1,0 +1,65 @@
+.titulo{
+    margin-top: 40px;
+    margin-left: 150px;
+}
+.titulo2{
+    text-align: center;
+}
+
+
+.fondo_formulario{
+
+    background: rgb(239, 189, 179);
+    padding: 20px;
+    border-radius: 5px;
+
+ 
+}
+.formulario_registro{
+    width: 620px;
+    font-size:medium;
+    margin:50px auto; 
+  
+ 
+
+}
+input{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: medium;
+    height: 40px;
+    text-align: center;
+    width:280px;
+    display: block;
+    
+ 
+}
+.register-button{
+    width: 80%;
+    display:block;
+    height:42px;
+    margin-top: 25px;
+    font-size: 16px;
+    color: rgb(161, 216,229);
+    background-color: rgb(143, 142, 142);
+    border-radius: 3px;
+    text-align: center;
+    margin: auto;
+    cursor: pointer;
+    
+    }
+    .register-button:active{
+        background-color: rgb(40, 169, 192);
+        color: rgb(239, 189, 179);
+    
+    }
+    .mensaje{
+        color:red;
+        font-size: 14px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .comentario{
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    
