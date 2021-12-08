@@ -4,6 +4,8 @@ declare var nombre_vali:any;
 declare var retornoNombre:any;
 declare var correo_vali:any;
 declare var retornoCorreo:any;
+declare var contrasena1_vali:any;
+declare var contrasena2_vali:any;
 
 
 
@@ -18,6 +20,8 @@ export class RegistrarPersonasComponent implements OnInit {
  nombre= "Ruth";
  retornoNombre=" ";
  retornoCorreo=" ";
+ retornoContrasena1=" ";
+ retornoContrasena2=" ";
  
 
 
@@ -42,6 +46,14 @@ export class RegistrarPersonasComponent implements OnInit {
   let correo1=this.datosformulario.value.correo;
   let retorno1 =correo_vali(correo1);
   this.retornoCorreo=retorno1;
+
+  let contrasena11=this.datosformulario.value.contrasena1;
+  let retorno2= contrasena1_vali(contrasena11);
+  this.retornoContrasena1=retorno2;
+
+  let contrasena21=this.datosformulario.value.contrasena2;
+  let retorno3 = contrasena2_vali(contrasena11,contrasena21);
+  this.retornoContrasena2=retorno3;
 
   
 
