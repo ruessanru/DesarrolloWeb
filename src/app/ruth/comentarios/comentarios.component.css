@@ -4,6 +4,60 @@
     margin-top: 30px;
 }
 .columna2{
-    font-size: medium;
-    margin-top: 30px;
+
+    margin-top: 40px;
 }
+.botonpublicar{
+    width: 25%;
+    display:block;
+    height:42px;
+    margin-top: 25px;
+    font-size: 16px;
+    color: rgb(161, 216,229);
+    background-color: rgb(143,142,142);
+    border-radius: 3px;
+    text-align: center;
+    margin: auto;
+    cursor: pointer;
+}
+.botonpublicar:active{
+  background-color: rgb(40, 169, 192);
+  color: rgb(239, 189, 179);
+
+}
+.fondo_comentario{
+
+  background: rgb(239, 189, 179);
+  padding: 20px;
+  border-radius: 5px;
+}
+.form_comentarios{
+  width: 90%;
+  font-size:medium;
+  margin:50px auto;
+}
+.titulo_comentario{
+text-align: center;
+
+
+}
+
+.caja_usuario1{
+  background: rgb(224, 227, 228);
+  width:100%;
+  padding:20px;
+  align-content: space-between;
+
+
+}
+.mensaje{
+  color:red;
+  font-size: 14px;
+  margin: 0 auto;
+  text-align: center;
+}
+input{
+  font-size: 16px;
+}
+
+

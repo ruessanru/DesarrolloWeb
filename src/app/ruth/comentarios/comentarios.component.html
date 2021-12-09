@@ -9,29 +9,62 @@
                 <p>Some text</p><br><hr>
                 <a href="">Tips and Grammar</a>
                 <p>Some text</p><br><br>
-                
+
             </div>
-          
+
         </div>
         <div class ="col-sm-6">
             <div class="columna2">
-                <h2>Comentarios</h2><br><br>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A nam nihil unde doloribus, expedita possimus, sint itaque quis vero, repellat deserunt? Unde debitis porro atque tenetur delectus ipsum quis alias.</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A nam nihil unde doloribus, expedita possimus, sint itaque quis vero, repellat deserunt? Unde debitis porro atque tenetur delectus ipsum quis alias.</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A nam nihil unde doloribus, expedita possimus, sint itaque quis vero, repellat deserunt? Unde debitis porro atque tenetur delectus ipsum quis alias.</p>
-                <br>
+              <div class="titulo_comentario"><h2>COMENTARIOS</h2></div>
+              <form class= "form_comentarios"  action="" method="post" name="forma_comentario" [formGroup]="datoscomentarios">
+                <div class="shadow p-1 bg-white rounded">
+                  <div class="fondo_comentario"><br>
+
+                    <div class="form-group">
+                      <div class= "row">
+                        <div class="col-sm-2">
+                          <div><img src="../../../assets/imagenes/avatar.png" alt="avatar" width =70%></div>
+                        </div>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control"  formControlName="comentario" id="comentario" name="comentario" placeholder="Escriba su comentario..." required >
+                          <div class="mensaje">{{retornoComentario}}</div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div><br>
+                <div><button (click)="recoger_comentarios()" class="botonpublicar">Publicar</button></div><br>
+              </form>
+
+
+              <div class= "shadow p-5 bg-white rounded">
+
+                  <div class="caja_usuario1">
+                     {{prueba}}
+                  </div><br>
+                  <div class="caja_usuario1">
+
+                  </div><br>
+                  <div class="caja_usuario1">
+
+                  </div><br>
+
+
+              </div>
+
             </div>
-         
+
         </div>
         <div class= "col-sm-3 columna1" >
             <h3><a href="matricula">OUR VIDEOS</a></h3><hr>
             <div>
                 <a href=""><img class="" src="../../../assets/imagenes/Imagen5.jpg" alt="Imagen video niños animados" width="100%"></a>
-                
+
             </div><hr>
             <div>
                 <a href=""><img class="" src="../../../assets/imagenes/Imagen6.jpg" alt="Imagen de video Juegos interáctivos" width="100%"></a>
-                
+
             </div><hr>
 
 

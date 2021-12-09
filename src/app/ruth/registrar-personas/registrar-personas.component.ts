@@ -38,6 +38,10 @@ export class RegistrarPersonasComponent implements OnInit {
  //métodos
 
  recoger_datos(){
+  /*let nombreUsuario1=this.datosformulario.value.nombreUsuario;
+  let correo1=this.datosformulario.value.correo;
+  let contrasena11=this.datosformulario.value.contrasena1;
+  let contrasena21=this.datosformulario.value.contrasena2;*/
 
   let nombreUsuario1=this.datosformulario.value.nombreUsuario;
   let retorno =nombre_vali(nombreUsuario1);
