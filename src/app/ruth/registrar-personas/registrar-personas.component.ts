@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import {ServiciogeneralService} from '../serviciogeneral.service';
+
 declare var nombre_vali:any;
 declare var retornoNombre:any;
 declare var correo_vali:any;
@@ -22,7 +24,7 @@ export class RegistrarPersonasComponent implements OnInit {
  retornoCorreo=" ";
  retornoContrasena1=" ";
  retornoContrasena2=" ";
- 
+
 
 
 
@@ -38,12 +40,15 @@ export class RegistrarPersonasComponent implements OnInit {
  //métodos
 
  recoger_datos(){
-  /*let nombreUsuario1=this.datosformulario.value.nombreUsuario;
-  let correo1=this.datosformulario.value.correo;
-  let contrasena11=this.datosformulario.value.contrasena1;
-  let contrasena21=this.datosformulario.value.contrasena2;*/
 
   let nombreUsuario1=this.datosformulario.value.nombreUsuario;
+  let correo1=this.datosformulario.value.correo;
+  let contrasena11=this.datosformulario.value.contrasena1;
+  let contrasena21=this.datosformulario.value.contrasena2;
+
+  this.APIService.InsertarDatos(this.datosformulario.value).subscribe(data => {alert("Se agrego Bien");});
+
+  /*let nombreUsuario1=this.datosformulario.value.nombreUsuario;
   let retorno =nombre_vali(nombreUsuario1);
   this.retornoNombre=retorno;
 
@@ -57,17 +62,17 @@ export class RegistrarPersonasComponent implements OnInit {
 
   let contrasena21=this.datosformulario.value.contrasena2;
   let retorno3 = contrasena2_vali(contrasena11,contrasena21);
-  this.retornoContrasena2=retorno3;
-
-  
+  this.retornoContrasena2=retorno3;*/
 
 
-  
-  
-   
+
+
+
+
+
  }
 
-  constructor() { }
+  constructor(private APIService:ServiciogeneralService) { }
 
   ngOnInit(): void {
   }

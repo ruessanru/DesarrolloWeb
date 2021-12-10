@@ -18,6 +18,8 @@ import { LearningVideosComponent } from './ruth/learning-videos/learning-videos.
 import { TipsGrammarComponent } from './ruth/tips-grammar/tips-grammar.component';
 import { MatriculaComponent } from './ruth/matricula/matricula.component';
 import { FrameunoComponent } from './ruth/frameuno/frameuno.component';
+import { ServiciogeneralService } from './ruth/serviciogeneral.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -40,9 +42,10 @@ import { FrameunoComponent } from './ruth/frameuno/frameuno.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ServiciogeneralService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
