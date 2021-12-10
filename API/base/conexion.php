@@ -3,7 +3,7 @@ global $enlace;
 
 function conexion(){
 
-  $enlace=mysqli_connect('localhost', 'root', '', 'enjoyenglishbd'); //si fuera un servidor aqui va la IP
+  $enlace=mysqli_connect('localhost', 'root', '', 'enjoyenglishdb'); //si fuera un servidor aqui va la IP
 
   if(!$enlace){
 

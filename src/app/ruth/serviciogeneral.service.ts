@@ -7,7 +7,7 @@ import {HttpClient} from '@angular/common/http';
 })
 export class ServiciogeneralService {
 
-  URL_viaje='https://localhost/ciclog29unab/API/Insertardatos.php' //Aquí va la url del backend
+  URL_viaje='https://localhost/ciclog29unab/API/crud/Insertardatos.php' //Aquí va la url del backend
 
   constructor(private http:HttpClient) { }
 

@@ -41,10 +41,10 @@ export class RegistrarPersonasComponent implements OnInit {
 
  recoger_datos(){
 
-  let nombreUsuario1=this.datosformulario.value.nombreUsuario;
-  let correo1=this.datosformulario.value.correo;
-  let contrasena11=this.datosformulario.value.contrasena1;
-  let contrasena21=this.datosformulario.value.contrasena2;
+  let nombreUsuario=this.datosformulario.value.nombreUsuario;
+  let correo=this.datosformulario.value.correo;
+  let contrasena1=this.datosformulario.value.contrasena1;
+  let contrasena2=this.datosformulario.value.contrasena2;
 
   this.APIService.InsertarDatos(this.datosformulario.value).subscribe(data => {alert("Se agrego Bien");});
 
