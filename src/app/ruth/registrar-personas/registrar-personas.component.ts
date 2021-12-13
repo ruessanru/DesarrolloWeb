@@ -8,6 +8,7 @@ declare var correo_vali:any;
 declare var retornoCorreo:any;
 declare var contrasena1_vali:any;
 declare var contrasena2_vali:any;
+declare var ventana_exito:any;
 
 
 
@@ -46,7 +47,7 @@ export class RegistrarPersonasComponent implements OnInit {
   let contrasena1=this.datosformulario.value.contrasena1;
   let contrasena2=this.datosformulario.value.contrasena2;
 
-  this.APIService.InsertarDatos(this.datosformulario.value).subscribe(data => {alert("Se agrego Bien");});
+ this.APIService.InsertarDatos(this.datosformulario.value).subscribe(data => {ventana_exito()/*alert("Se agrego Bien");*/});
 
   /*let nombreUsuario1=this.datosformulario.value.nombreUsuario;
   let retorno =nombre_vali(nombreUsuario1);
