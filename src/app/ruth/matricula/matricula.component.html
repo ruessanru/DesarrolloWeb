@@ -1,9 +1,10 @@
+<app-barrahorizontalnavbar></app-barrahorizontalnavbar>
 <div class= "container" >
 
     <div class="titulo">
       <h1>Matricúlate para ver nuestros videos privados...</h1>
     </div>
-    
+
     <form class= formulario_registro  action="" method="post" name="formulario_matricular_persona" [formGroup]="datosformulario">
       <div class="shadow p-1 bg-white rounded">
         <div class="fondo_formulario"><br>
@@ -20,49 +21,50 @@
               <div class="col">
                <div class="form-group">
                     <input type="text" class="form-control"  formControlName="apellidoUsuario" id="apellidoUsuario" name="apellidoUsuario" placeholder="Apellidos" required >
-                    <div class="mensaje">{{retornoApellido}}</div> 
+                    <div class="mensaje">{{retornoApellido}}</div>
                 </div>
               </div>
-            
+
             </div>
             <div class= "row">
               <div class="col">
                 <div class="form-group">
                   <input type="email" class="form-control" formControlName="correo" id="correo" name="correo" placeholder="Correo Electrónico" required>
-                  <div class="mensaje">{{retornoCorreo}}</div> 
+                  <div class="mensaje">{{retornoCorreo}}</div>
                 </div>
               </div>
                <div class="col">
                 <div class="form-group">
                   <input type="text" class="form-control"  formControlName="telefono" id="telefono" name="telefono" placeholder="telefono" required >
-                  <div class="mensaje">{{retornoTelefono}}</div> 
+                  <div class="mensaje">{{retornoTelefono}}</div>
                 </div>
-                 
-               </div> 
-               
-           
+
+               </div>
+
+
             </div>
 
             <div class="comentario">
               <a href="iniciar_sesion" target="_parent">¿Ya te matriculaste? Inicia sesión aquí</a>
             </div>
-          
+
           <div >
             <button (click)="recoger_datos()" class="register-button">Guardar</button>
           </div>
-      
+
           <br><br>
-               
-          
+
+
 
        </div>
       </div>
-      
-        
+
+
       </form>
-      
-    
-      
-    
+
+
+
+
 
 </div>
+<app-barrahorizontalfooter></app-barrahorizontalfooter>

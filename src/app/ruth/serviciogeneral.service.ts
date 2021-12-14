@@ -14,7 +14,7 @@ export class ServiciogeneralService {
   InsertarDatos(usuario:Modulo){
     //comunicar con la base de datos
 
-    alert("llego alservicio" + JSON.stringify(usuario));
+    //alert("llego alservicio" + JSON.stringify(usuario));
     return this.http.post<Modulo>(this.URL_viaje,usuario);
   }
 }

@@ -1,34 +1,42 @@
+<app-barrahorizontalnavbar></app-barrahorizontalnavbar>
 
 <div class= "container" >
 
     <div class="titulo">
       <h1>Bienvenido, Inicia tu sesión...</h1>
     </div>
-    
-    <form class= formulario_registro  action="" method="post" name="formulario_insertar_persona" [formGroup]="datosformulario">
+
+    <form class= formulario_registro  action="" method="post" name="formulario_comprobar_usuario" [formGroup]="datosformulario">
       <div class="shadow p-1 bg-white rounded">
         <div class="fondo_formulario"><br>
 
+            <div class="form-group">
+              <input type="text" class="form-control"  formControlName="nombreUsuario" id="nombreUsuario" name="nombreUsuario" placeholder="Nombre Usuario" required >
+            <div class="mensaje">{{retornoNombre}}</div>
+            </div>
+
+
+
           <div class="form-group">
-           <input type="text" class="form-control"  formControlName="nombreUsuario" id="nombreUsuario" name="nombreUsuario" placeholder="Nombre Usuario" required >
-          <div class="mensaje">{{retornoNombre}}</div>
+              <input type="password" class="form-control" formControlName="contrasena1"id="contrasena1" name="contrasena1" placeholder="Contraseña" required>
+              <div class="mensaje">{{retornoContrasena1}}</div>
           </div>
-  
-  
-          <div class="form-group">
-             <input type="password" class="form-control" formControlName="contrasena1"id="contrasena1" name="contrasena1" placeholder="Contraseña" required>
-             <div class="mensaje">{{retornoContrasena1}}</div>
-          </div>
-  
-         
+
+
           <div class="comentario">
             <a href="formu_registrar" target="_parent">¿No tienes cuenta, aún? Regístrate aquí</a>
           </div>
- 
+
           <div >
             <button (click)="recoger_datos()" class="register-button">Iniciar sesión</button>
           </div>
-      
+
           <br><br>
-               
-          
+        </div>
+      </div>
+
+    </form>
+</div>
+
+<app-barrahorizontalfooter></app-barrahorizontalfooter>
+

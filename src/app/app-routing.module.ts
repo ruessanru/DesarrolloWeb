@@ -8,6 +8,7 @@ import { RecursosComponent } from './ruth/recursos/recursos.component';
 import { NosotrosComponent } from './ruth/nosotros/nosotros.component';
 import { ComentariosComponent } from './ruth/comentarios/comentarios.component';
 import { MatriculaComponent } from './ruth/matricula/matricula.component';
+import { FrameunoComponent } from './ruth/frameuno/frameuno.component';
 
 
 const routes: Routes = [
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path: 'nosotros',component:NosotrosComponent},
   {path: 'comentarios',component:ComentariosComponent},
   {path: 'matricula',component:MatriculaComponent},
+  {path: 'menuframe',component:FrameunoComponent},
 
 
   {path: '**',component: Pagina404Component}
