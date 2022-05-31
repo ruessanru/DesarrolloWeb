@@ -44,10 +44,35 @@ export class RegistrarPersonasComponent implements OnInit {
 
   let nombreUsuario=this.datosformulario.value.nombreUsuario;
   let correo=this.datosformulario.value.correo;
+
   let contrasena1=this.datosformulario.value.contrasena1;
   let contrasena2=this.datosformulario.value.contrasena2;
 
- this.APIService.InsertarDatos(this.datosformulario.value).subscribe(data => {ventana_exito()/*alert("Se agrego Bien");*/});
+  let retorno1 =correo_vali(correo);
+  this.retornoCorreo=retorno1;
+
+  let retorno =nombre_vali(nombreUsuario);
+  this.retornoNombre=retorno;
+
+  let retorno2= contrasena1_vali(contrasena1);
+  this.retornoContrasena1=retorno2;
+
+  let retorno3 = contrasena2_vali(contrasena1,contrasena2);
+  this.retornoContrasena2=retorno3;
+
+
+
+   if (retorno1==" " && retorno==" " && retorno2==" " && retorno3==" "){
+    this.APIService.InsertarDatos(this.datosformulario.value).subscribe(data => {ventana_exito()/*alert("Se agrego Bien");*/});
+   }
+   else{
+     this.recoger_datos();
+   }
+
+
+
+
+ };
 
   /*let nombreUsuario1=this.datosformulario.value.nombreUsuario;
   let retorno =nombre_vali(nombreUsuario1);
@@ -71,7 +96,7 @@ export class RegistrarPersonasComponent implements OnInit {
 
 
 
- }
+
 
   constructor(private APIService:ServiciogeneralService) { }
 

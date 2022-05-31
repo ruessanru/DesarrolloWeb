@@ -20,6 +20,7 @@ import { MatriculaComponent } from './ruth/matricula/matricula.component';
 import { FrameunoComponent } from './ruth/frameuno/frameuno.component';
 import { ServiciogeneralService } from './ruth/serviciogeneral.service';
 import { HttpClientModule } from '@angular/common/http';
+import { ListaComentariosComponent } from './ruth/lista-comentarios/lista-comentarios.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,9 @@ import { HttpClientModule } from '@angular/common/http';
     LearningVideosComponent,
     TipsGrammarComponent,
     MatriculaComponent,
-    FrameunoComponent
+    FrameunoComponent,
+    ListaComentariosComponent,
+
   ],
   imports: [
     BrowserModule,

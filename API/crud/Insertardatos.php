@@ -13,7 +13,11 @@ require("../base/conexion.php");
 
 $conexion = conexion();
 
-mysqli_query($conexion,"INSERT INTO usuarios ( nombreUsuario1, correo1, contrasena11, contrasena21) VALUES ('$params->nombreUsuario', '$params->correo', '$params->contrasena1','$params->contrasena2')");
+$contrasenaprueba=password_hash($params->contrasena1,PASSWORD_BCRYPT);
+
+
+mysqli_query($conexion,"INSERT INTO usuarios (nombreUsuario1, correo1, contrasena11, contrasena21) VALUES ('$params->nombreUsuario', '$params->correo', '$contrasenaprueba','$params->contrasena2')");
+
 
 class  Result{
 

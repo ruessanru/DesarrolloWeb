@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import {ServiciogeneralService} from '../serviciogeneral.service';
+
 declare var nombre_vali:any;
 declare var retornoNombre:any;
 declare var contrasena1_vali:any;
@@ -15,12 +17,21 @@ export class IniciarSesionComponent implements OnInit {
  nombre= "Ruth";
  retornoNombre=" ";
  retornoContrasena1=" ";
- 
- 
+
+ usuarioin="";
+
+  usuario={
+    id_usuario:"",
+    nombreUsuario1: "",
+    contrasena11: ""
+  }
+
+
+
  datosformulario= new FormGroup({
  nombreUsuario: new FormControl(''),
  contrasena1: new FormControl (''),
-   
+
 
 
  })
@@ -29,21 +40,42 @@ export class IniciarSesionComponent implements OnInit {
 
  recoger_datos(){
 
-  let nombreUsuario1=this.datosformulario.value.nombreUsuario;
-  let retorno =nombre_vali(nombreUsuario1);
-  this.retornoNombre=retorno;
+  let nombreUsuario=this.datosformulario.value.nombreUsuario;
+  let contrasena1= this.datosformulario.value.contrasena1;
 
-  let contrasena11=this.datosformulario.value.contrasena1;
-  let retorno2= contrasena1_vali(contrasena11);
-  this.retornoContrasena1=retorno2;
+  //let retorno =nombre_vali(nombreUsuario);
+  //this.retornoNombre=retorno;
 
-  
-   
- }
+  //let retorno2= contrasena1_vali(contrasena1);
+  //this.retornoContrasena1=retorno2;
 
-  constructor() { }
+  //if ( retorno2==" " && retorno2==" "){
+  //retorno2==" " ){
 
-  ngOnInit(): void {
-  }
+    this.APIService.ComprobarUsuario(this.datosformulario.value).subscribe((data:any) => {
+
+      if(data['resultado'] == 'OK'){
+        //ventana_exito();
+        alert(data['mensaje']);
+      }else{
+        //ventana_incorrecta();
+      alert(data['mensaje']);
+      }
+      this.usuarioin=data['nombrein'];
+    }
+
+
+  )//}
+
 
 }
+
+  constructor(private APIService:ServiciogeneralService) { }
+
+  ngOnInit(): void {
+
+  }
+
+
+  }
+

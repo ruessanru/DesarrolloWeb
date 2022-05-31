@@ -11,6 +11,7 @@ import { MatriculaComponent } from './ruth/matricula/matricula.component';
 import { FrameunoComponent } from './ruth/frameuno/frameuno.component';
 
 
+
 const routes: Routes = [
   {path: '',component: PaginaPrincipalComponent },
   {path: 'pagina_principal',component: PaginaPrincipalComponent },

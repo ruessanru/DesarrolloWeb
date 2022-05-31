@@ -1,20 +1,21 @@
 
-function nombre_vali(nombreUsuario1){
+function nombre_vali(nombreUsuario){
 
-    let tamano= String(nombreUsuario1).length;
+    let tamano= String(nombreUsuario).length;
 
-    if (nombreUsuario1== null || nombreUsuario1.length == 0){
+    if (nombreUsuario== null || nombreUsuario.length == 0){
         return "campo vacio";
     }
 
     for(x=0; x<tamano; x++){
 
-        c=nombreUsuario1.charAt(x);
+        c=nombreUsuario.charAt(x);
 
         if ( !((c>='a' && c<='z' )||(c>='A'&& c<='Z')  ||(c===' ') || (c=='ñ') ||( c=='Ñ')) ){
 
         return "Solo se permiten digitar letras";
-     }
+        }
+
     }
 
    return" ";
@@ -22,12 +23,12 @@ function nombre_vali(nombreUsuario1){
 
 }
 
-function correo_vali(correo1){
+function correo_vali(correo){
 
-    if (correo1== null || correo1.length == 0){
+    if (correo== null || correo.length == 0){
         return "campo vacio"
     }
-    if( (/\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)/.test(correo1)) ||(/\w+([-+.']\w+)*@\w+([-.]\w+)/.test(correo1)) ) {
+    if( (/\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)/.test(correo)) ||(/\w+([-+.']\w+)*@\w+([-.]\w+)/.test(correo)) ) {
         return " ";
       }else{
           return "correo inválido";
@@ -35,24 +36,30 @@ function correo_vali(correo1){
 
 
 
-   return"ok2";
+ return"ok2";
 
 }
 
-function contrasena1_vali(contrasena11){
-    if (contrasena11== null || contrasena11.length == 0){
+function contrasena1_vali(contrasena1){
+    if (contrasena1== null || contrasena1.length == 0){
         return "campo vacio";
+    }
+    if (contrasena1.length<8){
+        return "Ingrese una contraseña >= 8 caracteres";
 
+    }
+    return " ";
 
 }
-}
 
-function contrasena2_vali(contrasena11,contrasena21){
-    if(!(contrasena21 == contrasena11)){
+
+function contrasena2_vali(contrasena1,contrasena2){
+    if(!(contrasena2 == contrasena1)){
         return "La contraseña no coincide";
 
 
     }
+    return" ";
 
 }
 function telefono_vali(telefono1){
@@ -98,7 +105,7 @@ function apellido_vali(apellidoUsuario1){
 
 function comentario_vali(comentario1){
 
-  if ( comentario1.length > 10){
+  if ( comentario1.length > 100){
     return " Excede el número de caracteres ";
 
   }else if (comentario1== null || comentario1.length == 0){

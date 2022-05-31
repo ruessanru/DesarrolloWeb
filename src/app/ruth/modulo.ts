@@ -5,6 +5,7 @@ export class Modulo {
   correo!:String;
   contrasena1!:String;
   contrasena2!:String;
+  comentario!:String;
 
   constructor(){
 
